@@ -34,7 +34,7 @@ public class BrowserstackDriver implements WebDriverProvider {
 
 
         try {
-            return new RemoteWebDriver(new URL("https://hub-cloud.browserstack.com"), caps);
+            return new RemoteWebDriver(new URL("https://hub.browserstack.com/wd/hub"), caps);
         } catch (MalformedURLException e) {
             throw new RuntimeException("Invalid URL for BrowserStack", e);
         }
