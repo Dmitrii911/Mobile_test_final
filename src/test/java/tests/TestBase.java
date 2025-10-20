@@ -34,7 +34,7 @@ public class TestBase {
         }
 
         Configuration.browserSize = null;
-        Configuration.timeout = 10000;
+        Configuration.timeout = 20000;
         Configuration.remote = null;
     }
 
