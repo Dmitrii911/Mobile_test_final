@@ -19,7 +19,7 @@ public class TestBase {
 
     @BeforeAll
     static void setup() {
-        String deviceHost = System.getProperty("deviceHost", "emulation");
+        String deviceHost = System.getProperty("deviceHost", "browserstack");
         System.out.println("Running tests on: " + deviceHost);
 
         switch (deviceHost) {
@@ -46,7 +46,7 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        String deviceHost = System.getProperty("deviceHost", "emulation");
+        String deviceHost = System.getProperty("deviceHost", "browserstack");
 
         if ("browserstack".equals(deviceHost)) {
             String sessionId = Selenide.sessionId().toString();
